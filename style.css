@@ -1,0 +1,102 @@
+/* ----- simple, clean calculator style ----- */
+    * {
+      box-sizing: border-box;
+      font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+    }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      background: linear-gradient(145deg, #eef2f6 0%, #dfe7ef 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 16px;
+    }
+    .calculator {
+      background: #1e293b;
+      padding: 24px 20px 20px;
+      border-radius: 48px;
+      box-shadow: 0 18px 28px rgba(0, 0, 0, 0.4), inset 0 1px 4px rgba(255, 255, 255, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+    .display {
+      background: #0f172a;
+      border-radius: 28px;
+      padding: 20px 24px;
+      margin-bottom: 22px;
+      box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.6), 0 1px 2px rgba(255, 255, 255, 0.08);
+      text-align: right;
+      word-break: break-word;
+      min-height: 90px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
+    .display span {
+      font-size: 2.5rem;
+      font-weight: 400;
+      color: #f1f5f9;
+      letter-spacing: 1px;
+      line-height: 1.2;
+      font-variant-numeric: tabular-nums;
+    }
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    button {
+      border: none;
+      font-size: 1.6rem;
+      font-weight: 500;
+      padding: 18px 0;
+      border-radius: 28px;
+      background: #334155;
+      color: #f8fafc;
+      cursor: pointer;
+      transition: all 0.12s ease;
+      box-shadow: 0 6px 0 #0f172a, 0 6px 10px rgba(0, 0, 0, 0.3);
+      transform: translateY(-2px);
+      user-select: none;
+    }
+    button:active {
+      transform: translateY(4px);
+      box-shadow: 0 2px 0 #0f172a, 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+    button.operator {
+      background: #f59e0b;
+      color: #0f172a;
+      font-weight: 600;
+      box-shadow: 0 6px 0 #b45309, 0 6px 10px rgba(0, 0, 0, 0.3);
+    }
+    button.operator:active {
+      box-shadow: 0 2px 0 #b45309, 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+    button.clear,
+    button.backspace {
+      background: #b91c1c;
+      box-shadow: 0 6px 0 #7f1d1d, 0 6px 10px rgba(0, 0, 0, 0.3);
+      font-size: 1.4rem;
+    }
+    button.clear:active,
+    button.backspace:active {
+      box-shadow: 0 2px 0 #7f1d1d, 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+    button.equals {
+      background: #0d9488;
+      box-shadow: 0 6px 0 #0f766e, 0 6px 10px rgba(0, 0, 0, 0.3);
+      font-weight: 600;
+    }
+    button.equals:active {
+      box-shadow: 0 2px 0 #0f766e, 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+    button:disabled {
+      opacity: 0.45;
+      transform: translateY(0);
+      box-shadow: 0 4px 0 #0f172a, 0 6px 10px rgba(0, 0, 0, 0.15);
+      pointer-events: none;
+    }
+    .span-2 {
+      grid-column: span 2;
+    }
