@@ -4,6 +4,7 @@
 A fully functional, keyboard-supported calculator built with vanilla HTML, CSS, and JavaScript. It performs all basic math operations and handles chained calculations with a clean, modern interface.
 
 ---
+🔗 **Live Demo:** [https://integerconcept-data.github.io/simple-calculator/](https://integerconcept-data.github.io/simple-calculator/)
 
 ## ✨ Features
 
