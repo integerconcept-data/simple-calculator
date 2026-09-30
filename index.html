@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator · dynamic operations</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="calculator">
+      <!-- display shows current number / result -->
+    <div class="display">
+      <span id="display">0</span>
+    </div>
+    <!-- buttons grid: digits, operators, clear, etc -->
+    <div class="buttons">
+       <!-- first row: clear, backspace, divide, multiply -->
+      <button class="clear" id="clear">C</button>
+      <button class="backspace" id="backspace">⌫</button>
+      <button class="operator" data-op="/">÷</button>
+      <button class="operator" data-op="*">×</button>
+
+      <!-- digits 7 8 9 minus -->
+      <button class="digit" data-digit="7">7</button>
+      <button class="digit" data-digit="8">8</button>
+      <button class="digit" data-digit="9">9</button>
+      <button class="operator" data-op="-">−</button>
+
+      <!-- digits 4 5 6 plus -->
+      <button class="digit" data-digit="4">4</button>
+      <button class="digit" data-digit="5">5</button>
+      <button class="digit" data-digit="6">6</button>
+      <button class="operator" data-op="+">+</button>
+
+      <!-- row4: 1,2,3, equals -->
+      <button class="digit" data-digit="1">1</button>
+      <button class="digit" data-digit="2">2</button>
+      <button class="digit" data-digit="3">3</button>
+      <button class="equals" id="equals">=</button>
+
+      <!-- row5: 0 spans 2 columns, . spans 2 columns (but no more) -->
+      <button class="digit span-2" data-digit="0">0</button>
+      <button class="digit span-2" data-digit=".">.</button>
+    </div>
+   </div>
+
+
+   <script src="script.js"></script>
+</body>
+</html>
